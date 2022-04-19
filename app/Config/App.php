@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'http://localhost/projects/samsan/';
 
     /**
      * --------------------------------------------------------------------------
@@ -69,7 +69,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $defaultLocale = 'en';
+    public $defaultLocale = 'tr';
 
     /**
      * --------------------------------------------------------------------------
@@ -96,7 +96,7 @@ class App extends BaseConfig
      *
      * @var string[]
      */
-    public $supportedLocales = ['en'];
+    public $supportedLocales = ['tr'];
 
     /**
      * --------------------------------------------------------------------------
@@ -108,7 +108,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $appTimezone = 'America/Chicago';
+    public $appTimezone = 'Europe/Istanbul';
 
     /**
      * --------------------------------------------------------------------------
