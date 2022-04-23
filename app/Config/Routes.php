@@ -50,6 +50,10 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
 
+if (file_exists(APPPATH . 'Routes/install.php')) {
+	require APPPATH . 'Routes/install.php';
+}
+
 if (file_exists(APPPATH . 'Routes/web.php')) {
     require APPPATH . 'Routes/web.php';
 }
