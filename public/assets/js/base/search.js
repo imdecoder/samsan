@@ -20,7 +20,8 @@ class Search {
 			searchResultsId: 'searchPagesResults',
 			placeholder: 'Search',
 			loading: 'Loading',
-			jsonPath: Helpers.UrlFix('public/assets/json/search.json'),
+			// TODO: Arama için URL yapısı dinamikleştirilecek.
+			jsonPath: Helpers.UrlFix('http://localhost/projects/samsan/public/assets/json/search.json'),
 		};
 	}
 

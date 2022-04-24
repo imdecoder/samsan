@@ -38,8 +38,6 @@ class SubscriberModel extends Model
 		'firstname' => 'required|string|min_length[3]',
 		'lastname' => 'required|string|min_length[3]',
 		'degree' => 'string',
-		'phone' => 'numeric',
-		'mobile' => 'numeric',
 		'deposit' => 'numeric',
 		'factor' => 'numeric',
 		'receipt_no' => 'numeric',
@@ -55,21 +53,15 @@ class SubscriberModel extends Model
 		'firstname' => [
 			'required' => 'Ad alanı zorunludur.',
 			'string' => 'Ad alanı sadece alfabetik karakterlerden oluşabilir.',
-			'min_length' => 'Ad alanı en az 3 karakterden oluşmak zorundadır.'
+			'min_length' => 'Ad alanı en az 3 karakterden oluşabilir.'
 		],
 		'lastname' => [
 			'required' => 'Soyad alanı zorunludur.',
 			'string' => 'Soyad alanı sadece alfabetik karakterlerden oluşabilir.',
-			'min_length' => 'Soyad alanı en az 3 karakterden oluşmak zorundadır.'
+			'min_length' => 'Soyad alanı en az 3 karakterden oluşabilir.'
 		],
 		'degree' => [
 			'string' => 'Ünvan alanı sadece alfabetik karakterlerden oluşabilir.'
-		],
-		'phone' => [
-			'numeric' => 'Telefon numarası alanı sadece rakamlardan oluşabilir.'
-		],
-		'mobile' => [
-			'numeric' => 'Mobil numara alanı sadece rakamlardan oluşabilir.'
 		],
 		'deposit' => [
 			'numeric' => 'Depozito alanı sadece rakamlardan oluşabilir.'

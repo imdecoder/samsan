@@ -11,18 +11,18 @@
 	<?=$this->include('layouts/partials/fonts')?>
 
     <!-- Vendor Styles Start -->
-    <link rel="stylesheet" href="<?=base_url('public/assets/css/vendor/bootstrap.min.css')?>">
-    <link rel="stylesheet" href="<?=base_url('public/assets/css/vendor/OverlayScrollbars.min.css')?>">
+    <?=link_tag('public/assets/css/vendor/bootstrap.min.css')?>
+    <?=link_tag('public/assets/css/vendor/OverlayScrollbars.min.css')?>
     <?=$this->renderSection('styles')?>
     <!-- Vendor Styles End -->
 
     <!-- Template Base Styles Start -->
-    <link rel="stylesheet" href="<?=base_url('public/assets/css/styles.css')?>">
+    <?=link_tag('public/assets/css/styles.css')?>
     <!-- Template Base Styles End -->
 
-    <link rel="stylesheet" href="<?=base_url('public/assets/css/main.css')?>">
+    <?=link_tag('public/assets/css/main.css')?>
 
-    <script src="<?=base_url('public/assets/js/base/loader.js')?>"></script>
+    <?=script_tag('public/assets/js/base/loader.js')?>
 </head>
 <body>
     <div id="root">
@@ -65,31 +65,31 @@
     <?=$this->include('layouts/partials/search')?>
 
     <!-- Vendor Scripts Start -->
-    <script src="<?=base_url('public/assets/js/vendor/jquery-3.5.1.min.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/vendor/bootstrap.bundle.min.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/vendor/OverlayScrollbars.min.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/vendor/autoComplete.min.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/vendor/clamp.min.js')?>"></script>
+    <?=script_tag('public/assets/js/vendor/jquery-3.5.1.min.js')?>
+    <?=script_tag('public/assets/js/vendor/bootstrap.bundle.min.js')?>
+    <?=script_tag('public/assets/js/vendor/OverlayScrollbars.min.js')?>
+    <?=script_tag('public/assets/js/vendor/autoComplete.min.js')?>
+    <?=script_tag('public/assets/js/vendor/clamp.min.js')?>
 
-    <script src="<?=base_url('public/assets/icon/acorn-icons.js')?>"></script>
-    <script src="<?=base_url('public/assets/icon/acorn-icons-interface.js')?>"></script>
-    <script src="<?=base_url('public/assets/icon/acorn-icons-commerce.js')?>"></script>
+    <?=script_tag('public/assets/icon/acorn-icons.js')?>
+    <?=script_tag('public/assets/icon/acorn-icons-interface.js')?>
+    <?=script_tag('public/assets/icon/acorn-icons-commerce.js')?>
 
     <?=$this->renderSection('scripts.vendor')?>
     <!-- Vendor Scripts End -->
 
     <!-- Template Base Scripts Start -->
-    <script src="<?=base_url('public/assets/js/base/helpers.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/base/globals.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/base/nav.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/base/search.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/base/settings.js')?>"></script>
+    <?=script_tag('public/assets/js/base/helpers.js')?>
+    <?=script_tag('public/assets/js/base/globals.js')?>
+    <?=script_tag('public/assets/js/base/nav.js')?>
+    <?=script_tag('public/assets/js/base/search.js')?>
+    <?=script_tag('public/assets/js/base/settings.js')?>
     <!-- Template Base Scripts End -->
 
     <!-- Page Specific Scripts Start -->
     <?=$this->renderSection('scripts.page')?>
-    <script src="<?=base_url('public/assets/js/common.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/scripts.js')?>"></script>
+    <?=script_tag('public/assets/js/common.js')?>
+    <?=script_tag('public/assets/js/scripts.js')?>
     <!-- Page Specific Scripts End -->
 
 </body>

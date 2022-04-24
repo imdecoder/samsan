@@ -104,4 +104,64 @@ class SubscriberEntity extends Entity
 	{
 		return $this->attributes['deleted_at'];
 	}
+
+	public function setNo(int $no)
+	{
+		$this->attributes['no'] = $no;
+	}
+
+	public function setFirstname(string $firstname)
+	{
+		$this->attributes['firstname'] = $firstname;
+	}
+
+	public function setLastname(string $lastname)
+	{
+		$this->attributes['lastname'] = $lastname;
+	}
+
+	public function setDegree(string $degree)
+	{
+		$this->attributes['degree'] = $degree;
+	}
+
+	public function setPhone(string $phone)
+	{
+		$this->attributes['phone'] = $phone;
+	}
+
+	public function setMobile(string $mobile)
+	{
+		$this->attributes['mobile'] = $mobile;
+	}
+
+	public function setDeposit(int $deposit)
+	{
+		$this->attributes['deposit'] = $deposit;
+	}
+
+	public function setFactor(int $factor)
+	{
+		$this->attributes['factor'] = $factor;
+	}
+
+	public function setOwnership($ownership = SUBS_OWN_YES)
+	{
+		$this->attributes['ownership'] = $ownership;
+	}
+
+	public function setReceiptNo(int $receipt_no)
+	{
+		$this->attributes['receipt_no'] = $receipt_no;
+	}
+
+	public function setStatus($status = SUBS_ACTIVE)
+	{
+		$this->attributes['status'] = $status;
+	}
+
+	public function setDeletedAt()
+	{
+		$this->attributes['deleted_at'] = date('Y-m-d H:i:s');
+	}
 }

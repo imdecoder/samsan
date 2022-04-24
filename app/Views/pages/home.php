@@ -1,7 +1,7 @@
 <?=$this->extend('layouts/main')?>
 
 <?=$this->section('styles')?>
-<!-- ./add "custom styles" -->
+<!-- ./add "custom" styles -->
 <?=$this->endSection()?>
 
 <?=$this->section('content')?>
@@ -1260,12 +1260,12 @@
 <?=$this->endSection()?>
 
 <?=$this->section('scripts.vendor')?>
-    <script src="<?=base_url('public/assets/js/vendor/Chart.bundle.min.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/vendor/chartjs-plugin-rounded-bar.min.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/vendor/jquery.barrating.min.js')?>"></script>
+    <?=script_tag('public/assets/js/vendor/Chart.bundle.min.js')?>
+    <?=script_tag('public/assets/js/vendor/chartjs-plugin-rounded-bar.min.js')?>
+    <?=script_tag('public/assets/js/vendor/jquery.barrating.min.js')?>
 <?=$this->endSection()?>
 
 <?=$this->section('scripts.page')?>
-    <script src="<?=base_url('public/assets/js/cs/charts.extend.js')?>"></script>
-    <script src="<?=base_url('public/assets/js/pages/dashboard.js')?>"></script>
+    <?=script_tag('public/assets/js/cs/charts.extend.js')?>
+    <?=script_tag('public/assets/js/pages/dashboard.js')?>
 <?=$this->endSection()?>

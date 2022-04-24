@@ -38,16 +38,14 @@ class Subscribers extends Migration
 		        'null' => true
 	        ],
 	        'phone' => [
-		        'type' => 'INT',
-		        'constraint' => 11,
-		        'null' => true,
-		        'unsigned' => true
+		        'type' => 'VARCHAR',
+		        'constraint' => 255,
+		        'null' => true
 	        ],
 	        'mobile' => [
-		        'type' => 'INT',
-		        'constraint' => 11,
-		        'null' => true,
-		        'unsigned' => true
+		        'type' => 'VARCHAR',
+		        'constraint' => 255,
+		        'null' => true
 	        ],
 	        'deposit' => [
 		        'type' => 'DECIMAL',
