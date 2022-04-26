@@ -2,19 +2,19 @@
 <div class="menu-container flex-grow-1">
 	<ul id="menu" class="menu">
 		<li>
-			<a href="<?=site_url()?>">
+			<a href="<?=site_url(route_to('home'))?>">
 				<i data-acorn-icon="shop" class="icon" data-acorn-size="18"></i>
 				<span class="label">Anasayfa</span>
 			</a>
 		</li>
         <li>
-            <a href="#definitions" data-href="<?=site_url('definitions')?>">
+            <a href="#definitions" data-href="<?=site_url(route_to('definitions'))?>">
                 <i data-acorn-icon="attachment" class="icon" data-acorn-size="18"></i>
                 <span class="label">Tanımlar</span>
             </a>
             <ul id="definitions">
                 <li>
-                    <a href="<?=site_url('definitions/subscribers')?>">
+                    <a href="<?=site_url(route_to('definitions.subscribers'))?>">
                         <span class="label">Abone Tanımı</span>
                     </a>
                 </li>
