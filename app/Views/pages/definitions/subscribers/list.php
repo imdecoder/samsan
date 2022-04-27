@@ -11,13 +11,15 @@
 
             <!-- Title Start -->
             <div class="col-auto mb-3 mb-md-0 me-auto">
-                <div class="w-auto sw-md-30">
+                <div class="w-auto">
                     <a href="<?=site_url(route_to('definitions'))?>" class="muted-link pb-1 d-inline-block breadcrumb-back">
                         <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                         <span class="text-small align-middle">Tanımlar</span>
                     </a>
                     <h1 class="mb-0 pb-0 display-4" id="title">
-                        Abone Tanımı
+                        <a href="<?=site_url(route_to('definitions.subscribers'))?>">
+                            Abone Tanımı
+                        </a>
                     </h1>
                 </div>
             </div>
@@ -26,9 +28,9 @@
             <!-- Top Buttons Start -->
             <div class="col-3 d-flex align-items-end justify-content-end">
 
-                <a href="<?=site_url(route_to('definitions.subscribers', 'add'))?>" type="button" class="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto">
+                <a href="<?=site_url(route_to('definitions.subscribers.add'))?>" class="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto">
                     <i data-acorn-icon="plus"></i>
-                    <span>Abone Ekle</span>
+                    <span class="d-none d-lg-inline-block">Abone Ekle</span>
                 </a>
 
                 <!-- Check Button Start -->
@@ -73,7 +75,7 @@
         <!-- Search Start -->
         <div class="col-sm-12 col-md-5 col-lg-3 col-xxl-2 mb-1">
             <div class="d-inline-block float-md-start me-1 mb-1 search-input-container w-100 shadow bg-foreground">
-                <form action="<?=current_url()?>" method="get">
+                <form action="<?=current_url()?>" method="post">
                     <input type="text" name="q" placeholder="Ara" class="form-control">
                     <span class="search-magnifier-icon">
                         <i data-acorn-icon="search"></i>
@@ -223,7 +225,7 @@
                                         Mülk Sahibi
                                     </div>
                                     <div class="text-alternate">
-										<?=$subscriber->getOwnership()?>
+										<?=$subscriber->getOwnershipName()?>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-last order-lg-5">
@@ -251,7 +253,7 @@
                                 </div>
                                 <div class="col-1 col-lg-1 d-flex flex-column justify-content-center align-items-lg-end mb-2 mb-lg-0 order-2 text-end order-lg-last">
                                     <label class="form-check float-end pe-none mt-1">
-                                        <input type="checkbox" name="<?=$subscriber->getID()?>" class="form-check-input">
+                                        <input type="checkbox" name="<?=$subscriber->id?>" class="form-check-input">
                                     </label>
                                 </div>
                             </div>
