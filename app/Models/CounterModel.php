@@ -3,24 +3,25 @@
 namespace App\Models;
 
 use \CodeIgniter\Model;
+use App\Entities\CounterEntity;
 
 class CounterModel extends Model
 {
 	protected $table = 'counters';
 	protected $primaryKey = 'id';
 
-	protected $returnType = SubscriberEntity::class;
-	protected $useSoftDeletes = true;
+	protected $returnType = CounterEntity::class;
+	//protected $useSoftDeletes = true;
 
 	protected $allowedFields = [
 		'name',
 		'deleted_at'
 	];
 
-	protected $useTimestamps = true;
+	/*protected $useTimestamps = true;
 	protected $createdField = 'created_at';
 	protected $updatedField = 'updated_at';
-	protected $deletedField = 'deleted_at';
+	protected $deletedField = 'deleted_at';*/
 
 	protected $validationRules = [
 		'name' => 'required|string|is_unique[counters.name]'

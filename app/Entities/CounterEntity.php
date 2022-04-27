@@ -9,11 +9,11 @@ class CounterEntity extends Entity
 	protected $id;
 	protected $name;
 
-	protected $dates = [
+	/*protected $dates = [
 		'created_at',
 		'updated_at',
 		'deleted_at'
-	];
+	];*/
 
 	public function getID()
 	{
@@ -25,7 +25,7 @@ class CounterEntity extends Entity
 		return $this->attributes['name'];
 	}
 
-	public function getCreatedAt()
+	/*public function getCreatedAt()
 	{
 		return $this->attributes['created_at'];
 	}
@@ -38,15 +38,15 @@ class CounterEntity extends Entity
 	public function getDeletedAt()
 	{
 		return $this->attributes['deleted_at'];
-	}
+	}*/
 
 	public function setName(string $name)
 	{
 		$this->attributes['name'] = $name;
 	}
 
-	public function setDeletedAt()
+	/*public function setDeletedAt()
 	{
 		$this->attributes['deleted_at'] = date('Y-m-d H:i:s');
-	}
+	}*/
 }

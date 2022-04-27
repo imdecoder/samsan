@@ -10,9 +10,10 @@ class CounterSeeder extends Seeder
 	{
 		$data = [
 			['name' => 'Tenvirat'],
-			['name' => 'Motor']
+			['name' => 'Motor'],
+			['name' => 'Tenvirat + Motor']
 		];
 
-		$this->db->table('counters')->insertBatch($data);
+		//$this->db->table('counters')->insertBatch($data);
 	}
 }
