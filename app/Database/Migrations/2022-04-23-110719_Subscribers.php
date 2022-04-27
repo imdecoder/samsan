@@ -15,6 +15,12 @@ class Subscribers extends Migration
 				'unsigned' => true,
 				'auto_increment' => true
 			],
+			'year' => [
+				'type' => 'INT',
+				'constraint' => 4,
+				'null' => false,
+				'unsigned' => true
+			],
 	        'no' => [
 				'type' => 'INT',
 		        'constraint' => 11,
@@ -37,6 +43,10 @@ class Subscribers extends Migration
 		        'constraint' => 255,
 		        'null' => true
 	        ],
+			'notes' => [
+				'type' => 'TEXT',
+				'null' => true
+			],
 	        'phone' => [
 		        'type' => 'VARCHAR',
 		        'constraint' => 255,
@@ -53,7 +63,11 @@ class Subscribers extends Migration
 		        'default' => 0,
 		        'unsigned' => true
 	        ],
-			// TODO: Sayaç tipleri tablosu bağlanacak.
+			'counter_id' => [
+				'type' => 'INT',
+				'constraint' => 11,
+				'null' => true
+			],
 	        'factor' => [
 		        'type' => 'INT',
 		        'constraint' => 11,
@@ -68,6 +82,10 @@ class Subscribers extends Migration
 		        ],
 		        'null' => true
 	        ],
+			'receipt_date' => [
+				'type' => 'DATETIME',
+				'null' => true
+			],
 	        'receipt_no' => [
 				'type' => 'INT',
 		        'constraint' => 11,

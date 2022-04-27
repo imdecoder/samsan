@@ -13,7 +13,10 @@ class SubscriberSeeder extends Seeder
 
 		for ($i = 0; $i < 100; $i++)
 		{
+			$date = rand(strtotime('Jan 01 2012'), strtotime('Nov 01 2022'));
+
 			$data = [
+				'year' => random_int(2012, 2022),
 				'no' => random_int(12000, 50000),
 				'firstname' => $faker->firstName,
 				'lastname' => $faker->lastName,
@@ -21,10 +24,12 @@ class SubscriberSeeder extends Seeder
 				'phone' => $faker->phoneNumber,
 				'mobile' => $faker->phoneNumber,
 				'deposit' => random_int(0, 2000),
+				'counter_id' => random_int(1, 3),
 				'factor' => random_int(1, 30),
 				'ownership' => null,
+				'receipt_date' => date('Y-m-d H:i:s', $date),
 				'receipt_no' => random_int(1000, 4000),
-				'status' => SUBS_ACTIVE
+				'status' => STATUS_ACTIVE
 			];
 
 			$this->db->table('subscribers')->insert($data);

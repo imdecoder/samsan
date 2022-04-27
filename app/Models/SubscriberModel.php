@@ -14,15 +14,19 @@ class SubscriberModel extends Model
 	protected $useSoftDeletes = true;
 
 	protected $allowedFields = [
+		'year',
 		'no',
 		'firstname',
 		'lastname',
 		'degree',
+		'notes',
 		'phone',
 		'mobile',
 		'deposit',
+		'counter_id',
 		'factor',
 		'ownership',
+		'receipt_date',
 		'receipt_no',
 		'status',
 		'deleted_at'
@@ -34,17 +38,24 @@ class SubscriberModel extends Model
 	protected $deletedField = 'deleted_at';
 
 	protected $validationRules = [
+		'year' => 'required|numeric',
 		'no' => 'required|numeric|is_unique[subscribers.no]',
 		'firstname' => 'required|string|min_length[3]',
 		'lastname' => 'required|string|min_length[3]',
 		'degree' => 'string',
-		'deposit' => 'numeric',
-		'factor' => 'numeric',
+		//'deposit' => 'numeric',
+		'counter_id' => 'numeric',
+		//'factor' => 'numeric',
+		// TODO: "receipt_date" için tarih kuralı eklenecek.
 		'receipt_no' => 'numeric',
 		'status' => 'required'
 	];
 
 	protected $validationMessages = [
+		'year' => [
+			'required' => 'Yıl alanı zorunludur.',
+			'numeric' => 'Yıl alanı sadece rakamlardan oluşabilir.'
+		],
 		'no' => [
 			'required' => 'Abone numarası alanı zorunludur.',
 			'numeric' => 'Abone numarası alanı sadece rakamlardan oluşabilir.',
@@ -63,12 +74,15 @@ class SubscriberModel extends Model
 		'degree' => [
 			'string' => 'Ünvan alanı sadece alfabetik karakterlerden oluşabilir.'
 		],
-		'deposit' => [
+		/*'deposit' => [
 			'numeric' => 'Depozito alanı sadece rakamlardan oluşabilir.'
+		],*/
+		'counter_id' => [
+			'numeric' => 'Sayaç alanı yanlış formatta.'
 		],
-		'factor' => [
+		/*'factor' => [
 			'numeric' => 'Çarpan alanı sadece rakamlardan oluşabilir.'
-		],
+		],*/
 		'receipt_no' => [
 			'numeric' => 'Kayıt makbuz numarası alanı sadece rakamlardan oluşabilir.'
 		],

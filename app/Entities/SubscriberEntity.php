@@ -7,15 +7,19 @@ use \CodeIgniter\Entity;
 class SubscriberEntity extends Entity
 {
 	protected $id;
+	protected $year;
 	protected $no;
 	protected $firstname;
 	protected $lastname;
 	protected $degree;
+	protected $notes;
 	protected $phone;
 	protected $mobile;
 	protected $deposit;
+	protected $counter_id;
 	protected $factor;
 	protected $ownership;
+	protected $receipt_date;
 	protected $receipt_no;
 	protected $status;
 
@@ -25,9 +29,14 @@ class SubscriberEntity extends Entity
 		'deleted_at'
 	];
 
-	public function getID()
+	/*public function getID()
 	{
 		return $this->attributes['id'];
+	}*/
+
+	public function getYear()
+	{
+		return $this->attributes['year'];
 	}
 
 	public function getNo()
@@ -55,6 +64,11 @@ class SubscriberEntity extends Entity
 		return $this->attributes['degree'];
 	}
 
+	public function getNotes()
+	{
+		return $this->attributes['notes'];
+	}
+
 	public function getPhone()
 	{
 		return $this->attributes['phone'];
@@ -70,6 +84,11 @@ class SubscriberEntity extends Entity
 		return $this->attributes['deposit'];
 	}
 
+	public function getCounterID()
+	{
+		return $this->attributes['counter_id'];
+	}
+
 	public function getFactor()
 	{
 		return $this->attributes['factor'];
@@ -78,6 +97,28 @@ class SubscriberEntity extends Entity
 	public function getOwnership()
 	{
 		return $this->attributes['ownership'];
+	}
+
+	public function getOwnershipName()
+	{
+		$ownership = $this->attributes['ownership'];
+
+		if ($ownership == SUBS_OWN_YES)
+		{
+			return 'Evet';
+		}
+
+		if ($ownership == SUBS_OWN_NO)
+		{
+			return 'Hayır';
+		}
+
+		return 'Bilinmiyor';
+	}
+
+	public function getReceiptDate()
+	{
+		return $this->attributes['receipt_date'];
 	}
 
 	public function getReceiptNo()
@@ -105,6 +146,11 @@ class SubscriberEntity extends Entity
 		return $this->attributes['deleted_at'];
 	}
 
+	public function setYear(int $year)
+	{
+		$this->attributes['year'] = $year;
+	}
+
 	public function setNo(int $no)
 	{
 		$this->attributes['no'] = $no;
@@ -125,6 +171,11 @@ class SubscriberEntity extends Entity
 		$this->attributes['degree'] = $degree;
 	}
 
+	public function setNotes(string $notes)
+	{
+		$this->attributes['notes'] = $notes;
+	}
+
 	public function setPhone(string $phone)
 	{
 		$this->attributes['phone'] = $phone;
@@ -135,9 +186,14 @@ class SubscriberEntity extends Entity
 		$this->attributes['mobile'] = $mobile;
 	}
 
-	public function setDeposit(int $deposit)
+	public function setDeposit($deposit)
 	{
 		$this->attributes['deposit'] = $deposit;
+	}
+
+	public function setCounterID(int $counter_id)
+	{
+		$this->attributes['counter_id'] = $counter_id;
 	}
 
 	public function setFactor(int $factor)
@@ -150,12 +206,17 @@ class SubscriberEntity extends Entity
 		$this->attributes['ownership'] = $ownership;
 	}
 
+	public function setReceiptDate($receipt_date)
+	{
+		$this->attributes['receipt_date'] = $receipt_date;
+	}
+
 	public function setReceiptNo(int $receipt_no)
 	{
 		$this->attributes['receipt_no'] = $receipt_no;
 	}
 
-	public function setStatus($status = SUBS_ACTIVE)
+	public function setStatus($status = STATUS_ACTIVE)
 	{
 		$this->attributes['status'] = $status;
 	}
