@@ -15,11 +15,6 @@ class RateEntity extends Entity
     protected $lighting_price;
     protected $service_price;
 
-    /*public function getID()
-    {
-        return $this->attributes['id'];
-    }*/
-
     public function getMonthName()
     {
         return $this->attributes['month_name'];
@@ -53,5 +48,40 @@ class RateEntity extends Entity
     public function getServicePrice()
     {
         return $this->attributes['service_price'];
+    }
+
+    public function setMonthName(string $month_name)
+    {
+        $this->attributes['month_name'] = $month_name;
+    }
+
+    public function setMonthNo(int $month_no)
+    {
+        $this->attributes['month_no'] = $month_no;
+    }
+
+    public function setTaxRate(int $tax_rate)
+    {
+        $this->attributes['tax_rate'] = $tax_rate;
+    }
+
+    public function setUnitPrice(int $unit_price)
+    {
+        $this->attributes['unit_price'] = $unit_price;
+    }
+
+    public function setOverdueInterest(int $overdue_interest)
+    {
+        $this->attributes['overdue_interest'] = $overdue_interest;
+    }
+
+    public function setLightingPrice(int $lighting_price)
+    {
+        $this->attributes['lighting_price'] = $lighting_price;
+    }
+
+    public function setServicePrice(int $service_price)
+    {
+        $this->attributes['service_price'] = $service_price;
     }
 }
