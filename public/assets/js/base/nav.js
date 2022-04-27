@@ -460,6 +460,7 @@ class Nav {
 		}
 	}
 
+	// TODO: Navbar menüleri için oto. aktiflik yapılandıralacak.
 	_matchUrlByMenu(selector) {
 		const url = window.location.pathname.toLowerCase();
 		const urlWithoutBackslash = url.replace(/^\/+/g, '').replace(/\.[^/.]+$/, '');

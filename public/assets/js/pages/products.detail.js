@@ -53,7 +53,7 @@ class ProductsDetail {
 	_initImask() {
 		document.querySelectorAll('.mask-currency').forEach((el) => {
 			IMask(el, {
-				mask: '$ num',
+				mask: '₺ num',
 				blocks: {
 					num: {
 						mask: Number,
