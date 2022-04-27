@@ -81,5 +81,5 @@ defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest auto
 defined('SUBS_OWN_YES')        || define('SUBS_OWN_YES', 'YES');
 defined('SUBS_OWN_NO')         || define('SUBS_OWN_NO', 'NO');
 
-defined('SUBS_ACTIVE')         || define('SUBS_ACTIVE', 'ACTIVE');
-defined('SUBS_PASSIVE')        || define('SUBS_PASSIVE', 'PASSIVE');
+defined('STATUS_ACTIVE')         || define('STATUS_ACTIVE', 'ACTIVE');
+defined('STATUS_PASSIVE')        || define('STATUS_PASSIVE', 'PASSIVE');
