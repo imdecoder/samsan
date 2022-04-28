@@ -19,12 +19,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?=site_url('definitions/rates')?>">
+                    <a href="<?=site_url(route_to('definitions.rates'))?>">
                         <span class="label">KDV, Ceza Ora. & Birim Fiy.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=site_url('definitions/unsubscribers')?>">
+                    <a href="<?=site_url(route_to('definitions.unsubscribers'))?>">
                         <span class="label">İlişik Kesen Aboneler</span>
                     </a>
                 </li>

@@ -192,7 +192,7 @@
                                     <div class="text-muted text-small d-lg-none">
                                         Abone No
                                     </div>
-                                    <a href="<?=site_url('definitions/subscribers/' . $subscriber->getNo())?>" class="text-truncate h-100 d-flex align-items-center">
+                                    <a href="<?=site_url(route_to('definitions.subscribers.edit', $subscriber->id))?>" class="text-truncate h-100 d-flex align-items-center">
                                         <?=$subscriber->getNo()?>
                                     </a>
                                 </div>

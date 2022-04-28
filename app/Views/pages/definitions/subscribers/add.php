@@ -129,16 +129,16 @@
                             <label class="form-label">
                                 Sayaç Tipi
                             </label>
-                            <select name="counter_id" class="select-single-no-search">
-
-                                <?php foreach ($counters as $counter) : ?>
-
-                                    <option value="<?=$counter->getID()?>">
-                                        <?=$counter->getName()?>
-                                    </option>
-
-                                <?php endforeach; ?>
-
+                            <select name="counter_type" class="select-single-no-search">
+                                <option value="<?=COUNTER_T?>">
+									Tenvirat
+                                </option>
+                                <option value="<?=COUNTER_M?>">
+                                    Motor
+                                </option>
+                                <option value="<?=COUNTER_TM?>">
+                                    Tenvirat + Motor
+                                </option>
                             </select>
                         </div>
                         <div class="mb-3 w-100">
@@ -187,19 +187,19 @@
                             <label class="form-label">
                                 Sayaç No
                             </label>
-                            <input type="text" name="phone" value="" class="form-control">
+                            <input type="text" name="counter_lighting_no" value="" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">
                                 Çarpan
                             </label>
-                            <input type="text" name="phone" value="1.00" class="form-control">
+                            <input type="text" name="counter_lighting_factor" value="1.00" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">
                                 Sayaç Markası
                             </label>
-                            <input type="text" name="phone" value="" class="form-control">
+                            <input type="text" name="counter_lighting_brand" value="" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -214,19 +214,19 @@
                             <label class="form-label">
                                 Sayaç No
                             </label>
-                            <input type="text" name="phone" value="" class="form-control">
+                            <input type="text" name="counter_engine_no" value="" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">
                                 Çarpan
                             </label>
-                            <input type="text" name="phone" value="" class="form-control">
+                            <input type="text" name="counter_engine_factor" value="" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">
                                 Sayaç Markası
                             </label>
-                            <input type="text" name="phone" value="" class="form-control">
+                            <input type="text" name="counter_engine_brand" value="" class="form-control">
                         </div>
                     </div>
                 </div>
