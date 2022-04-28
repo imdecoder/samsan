@@ -19,5 +19,6 @@ class Install extends BaseController
 
 		$seeder->call('App\Database\Seeds\Demo\SubscriberSeeder');
 		$seeder->call('App\Database\Seeds\Demo\CounterSeeder');
+		$seeder->call('App\Database\Seeds\Demo\RateSeeder');
 	}
 }
