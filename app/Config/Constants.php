@@ -78,8 +78,12 @@ defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-defined('SUBS_OWN_YES')        || define('SUBS_OWN_YES', 'YES');
-defined('SUBS_OWN_NO')         || define('SUBS_OWN_NO', 'NO');
+defined('SUBS_OWN_YES')	|| define('SUBS_OWN_YES', 'YES');
+defined('SUBS_OWN_NO')	|| define('SUBS_OWN_NO', 'NO');
 
-defined('STATUS_ACTIVE')         || define('STATUS_ACTIVE', 'ACTIVE');
-defined('STATUS_PASSIVE')        || define('STATUS_PASSIVE', 'PASSIVE');
+defined('STATUS_ACTIVE')	|| define('STATUS_ACTIVE', 'ACTIVE');
+defined('STATUS_PASSIVE')	|| define('STATUS_PASSIVE', 'PASSIVE');
+
+defined('COUNTER_T')		|| define('COUNTER_T', 'T');
+defined('COUNTER_M')		|| define('COUNTER_M', 'M');
+defined('COUNTER_TM')		|| define('COUNTER_TM', 'TM');
