@@ -23,8 +23,13 @@ class SubscriberModel extends Model
 		'phone',
 		'mobile',
 		'deposit',
-		'counter_id',
-		'factor',
+		'counter_type',
+		'counter_lighting_no',
+		'counter_lighting_factor',
+		'counter_lighting_brand',
+		'counter_engine_no',
+		'counter_engine_factor',
+		'counter_engine_brand',
 		'ownership',
 		'receipt_date',
 		'receipt_no',
@@ -43,9 +48,7 @@ class SubscriberModel extends Model
 		'firstname' => 'required|string|min_length[3]',
 		'lastname' => 'required|string|min_length[3]',
 		'degree' => 'string',
-		//'deposit' => 'numeric',
-		'counter_id' => 'numeric',
-		//'factor' => 'numeric',
+		'counter_type' => 'required',
 		// TODO: "receipt_date" için tarih kuralı eklenecek.
 		'receipt_no' => 'numeric',
 		'status' => 'required'
@@ -74,15 +77,9 @@ class SubscriberModel extends Model
 		'degree' => [
 			'string' => 'Ünvan alanı sadece alfabetik karakterlerden oluşabilir.'
 		],
-		/*'deposit' => [
-			'numeric' => 'Depozito alanı sadece rakamlardan oluşabilir.'
-		],*/
-		'counter_id' => [
-			'numeric' => 'Sayaç alanı yanlış formatta.'
+		'counter_type' => [
+			'required' => 'Sayaç tipi alanı zorunludur.'
 		],
-		/*'factor' => [
-			'numeric' => 'Çarpan alanı sadece rakamlardan oluşabilir.'
-		],*/
 		'receipt_no' => [
 			'numeric' => 'Kayıt makbuz numarası alanı sadece rakamlardan oluşabilir.'
 		],

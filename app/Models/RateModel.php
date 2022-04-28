@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use App\Entities\RateEntity;
 use CodeIgniter\Model;
 
-class RatesModel extends Model
+class RateModel extends Model
 {
 	protected $table = 'rates';
 	protected $primaryKey = 'id';
 
-	protected $returnType = \stdClass::class;
+	protected $returnType = RateEntity::class;
 	protected $useSoftDeletes = true;
 
 	protected $allowedFields = [
@@ -23,8 +24,8 @@ class RatesModel extends Model
 	];
 
 	protected $validationRules = [
-        'month_name' => 'required|string',
-        'month_no' => 'required|numeric',
+        'month_name' => 'required|string|is_unique[rates.month_name]',
+        'month_no' => 'required|numeric|is_unique[rates.month_no]',
         'tax_rate' => 'required|numeric',
         'unit_price' => 'required|numeric',
         'overdue_interest' => 'required|numeric',
@@ -35,11 +36,13 @@ class RatesModel extends Model
 	protected $validationMessages = [
         'month_name' => [
             'required' => 'Ay adı alanı zorunludur.',
-            'string' => 'Ay alanı sadece harflerden oluşabilir.'
+            'string' => 'Ay adı alanı sadece harflerden oluşabilir.',
+			'is_unique' => 'Ay adı başka bir oran tarafından kullanılıyor.'
         ],
         'month_no' => [
             'required' => 'Ay numarası alanı zorunludur.',
-            'numeric' => 'Ay numarası alanı sadece rakamlardan oluşabilir.'
+            'numeric' => 'Ay numarası alanı sadece rakamlardan oluşabilir.',
+			'is_unique' => 'Ay numarası başka bir oran tarafından kullanılıyor.'
         ],
         'tax_rate' => [
             'required' => 'Vergi oranı alanı zorunludur.',
