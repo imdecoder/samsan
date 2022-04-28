@@ -3,19 +3,16 @@
 namespace App\Controllers\Definitions;
 
 use App\Controllers\BaseController;
-use App\Models\CounterModel;
 use App\Models\SubscriberModel;
 use App\Entities\SubscriberEntity;
 
 class Subscribers extends BaseController
 {
-	protected $counterModel;
 	protected $subscriberModel;
 	protected $subscriberEntity;
 
 	public function __construct()
 	{
-		$this->counterModel = new CounterModel();
 		$this->subscriberModel = new SubscriberModel();
 		$this->subscriberEntity = new SubscriberEntity();
 	}
@@ -62,12 +59,18 @@ class Subscribers extends BaseController
 			$notes = $this->request->getPost('notes');
 			$phone = $this->request->getPost('phone');
 			$mobile = $this->request->getPost('mobile');
-			$counter_id = $this->request->getPost('counter_id');
-			//$factor = $this->request->getPost('factor');
+			$counter_type = $this->request->getPost('counter_type');
+			$counter_lighting_no = $this->request->getPost('counter_lighting_no');
+			$counter_lighting_factor = $this->request->getPost('counter_lighting_factor');
+			$counter_lighting_brand = $this->request->getPost('counter_lighting_brand');
+			$counter_engine_no = $this->request->getPost('counter_engine_no');
+			$counter_engine_factor = $this->request->getPost('counter_engine_factor');
+			$counter_engine_brand = $this->request->getPost('counter_engine_brand');
 			$ownership = $this->request->getPost('ownership');
 			$deposit = $this->request->getPost('deposit');
 			$receipt_no = $this->request->getPost('receipt_no');
-			$status = STATUS_ACTIVE; // $this->request->getPost('status')
+			// TODO: "receipt_date" eklenecek.
+			$status = STATUS_ACTIVE; // TODO: Durum formdan getirilecek. $this->request->getPost('status')
 
 			$this->subscriberEntity->setYear($year);
 			$this->subscriberEntity->setNo($no);
@@ -77,11 +80,17 @@ class Subscribers extends BaseController
 			$this->subscriberEntity->setNotes($notes);
 			$this->subscriberEntity->setPhone($phone);
 			$this->subscriberEntity->setMobile($mobile);
-			$this->subscriberEntity->setCounterID($counter_id);
-			//$this->subscriberEntity->setFactor($factor);
+			$this->subscriberEntity->setCounterType($counter_type);
+			$this->subscriberEntity->setCounterLightingNo($counter_lighting_no);
+			$this->subscriberEntity->setCounterLightingFactor($counter_lighting_factor);
+			$this->subscriberEntity->setCounterLightingBrand($counter_lighting_brand);
+			$this->subscriberEntity->setCounterEngineNo($counter_engine_no);
+			$this->subscriberEntity->setCounterEngineFactor($counter_engine_factor);
+			$this->subscriberEntity->setCounterEngineBrand($counter_engine_brand);
 			$this->subscriberEntity->setOwnership($ownership);
 			$this->subscriberEntity->setDeposit($deposit);
 			$this->subscriberEntity->setReceiptNo($receipt_no);
+			// TODO: "receipt_date" eklenecek.
 			$this->subscriberEntity->setStatus($status);
 
 			$this->subscriberModel->save($this->subscriberEntity);
@@ -92,12 +101,6 @@ class Subscribers extends BaseController
 			}
 		}
 
-		$counters = $this->counterModel->orderBy('id', 'ASC')->findAll();
-
-		$data = [
-			'counters' => $counters
-		];
-
-		return view('pages/definitions/subscribers/add', $data);
+		return view('pages/definitions/subscribers/add');
 	}
 }
