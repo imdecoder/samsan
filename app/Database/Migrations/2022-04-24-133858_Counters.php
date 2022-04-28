@@ -20,17 +20,17 @@ class Counters extends Migration
 				'constraint' => 255,
 				'null' => false,
 				'unique' => true
-			]
-			/*'created_at DATETIME DEFAULT CURRENT_TIMESTAMP',
+			],
+			'created_at DATETIME DEFAULT CURRENT_TIMESTAMP',
 			'updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
 			'deleted_at' => [
 				'type' => 'DATETIME',
 				'null' => true
-			]*/
+			]
 		]);
 
 		$this->forge->addKey('id', true);
-		$this->forge->createTable('counters');
+		//$this->forge->createTable('counters');
     }
 
     public function down()

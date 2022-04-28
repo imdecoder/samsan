@@ -63,17 +63,47 @@ class Subscribers extends Migration
 		        'default' => 0,
 		        'unsigned' => true
 	        ],
-			'counter_id' => [
+			'counter_type' => [
+				'type' => 'ENUM',
+				'constraint' => [
+					'T',
+					'M',
+					'TM'
+				],
+				'null' => false
+			],
+			'counter_lighting_no' => [
 				'type' => 'INT',
 				'constraint' => 11,
+				'null' => true,
+				'unsigned' => true
+			],
+			'counter_lighting_factor' => [
+				'type' => 'FLOAT',
+				'null' => true,
+				'unsigned' => true
+			],
+			'counter_lighting_brand' => [
+				'type' => 'VARCHAR',
+				'constraint' => 255,
 				'null' => true
 			],
-	        'factor' => [
-		        'type' => 'INT',
-		        'constraint' => 11,
-		        'null' => true,
-		        'unsigned' => true
-	        ],
+			'counter_engine_no' => [
+				'type' => 'INT',
+				'constraint' => 11,
+				'null' => true,
+				'unsigned' => true
+			],
+			'counter_engine_factor' => [
+				'type' => 'FLOAT',
+				'null' => true,
+				'unsigned' => true
+			],
+			'counter_engine_brand' => [
+				'type' => 'VARCHAR',
+				'constraint' => 255,
+				'null' => true
+			],
 	        'ownership' => [
 				'type' => 'ENUM',
 		        'constraint' => [

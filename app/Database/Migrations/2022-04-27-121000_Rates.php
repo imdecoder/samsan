@@ -18,13 +18,15 @@ class Rates extends Migration
 			'month_name' => [
 				'type' => 'VARCHAR',
 				'constraint' => 255,
-				'null' => false
+				'null' => false,
+				'unique' => true
 			],
 			'month_no' => [
 				'type' => 'INT',
 				'constraint' => 2,
 				'null' => false,
-				'unsigned' => true
+				'unsigned' => true,
+				'unique' => true
 			],
 			'tax_rate' => [
 				'type' => 'INT',
@@ -57,10 +59,13 @@ class Rates extends Migration
 				'unsigned' => true
 			]
 		]);
+
+		$this->forge->addKey('id', true);
+		$this->forge->createTable('rates');
     }
 
     public function down()
     {
-        //
+		$this->forge->dropTable('rates');
     }
 }
