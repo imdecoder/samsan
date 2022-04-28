@@ -16,8 +16,13 @@ class SubscriberEntity extends Entity
 	protected $phone;
 	protected $mobile;
 	protected $deposit;
-	protected $counter_id;
-	protected $factor;
+	protected $counter_type;
+	protected $counter_lighting_no;
+	protected $counter_lighting_factor;
+	protected $counter_lighting_brand;
+	protected $counter_engine_no;
+	protected $counter_engine_factor;
+	protected $counter_engine_brand;
 	protected $ownership;
 	protected $receipt_date;
 	protected $receipt_no;
@@ -84,14 +89,39 @@ class SubscriberEntity extends Entity
 		return $this->attributes['deposit'];
 	}
 
-	public function getCounterID()
+	public function getCounterType()
 	{
-		return $this->attributes['counter_id'];
+		return $this->attributes['counter_type'];
 	}
 
-	public function getFactor()
+	public function getCounterLightingNo()
 	{
-		return $this->attributes['factor'];
+		return $this->attributes['counter_lighting_no'];
+	}
+
+	public function getCounterLightingFactor()
+	{
+		return $this->attributes['counter_lighting_factor'];
+	}
+
+	public function getCounterLightingBrand()
+	{
+		return $this->attributes['counter_lighting_brand'];
+	}
+
+	public function getCounterEngineNo()
+	{
+		return $this->attributes['counter_engine_no'];
+	}
+
+	public function getCounterEngineFactor()
+	{
+		return $this->attributes['counter_engine_factor'];
+	}
+
+	public function getCounterEngineBrand()
+	{
+		return $this->attributes['counter_engine_brand'];
 	}
 
 	public function getOwnership()
@@ -191,14 +221,39 @@ class SubscriberEntity extends Entity
 		$this->attributes['deposit'] = $deposit;
 	}
 
-	public function setCounterID(int $counter_id)
+	public function setCounterType($counter_type)
 	{
-		$this->attributes['counter_id'] = $counter_id;
+		$this->attributes['counter_type'] = $counter_type;
 	}
 
-	public function setFactor(int $factor)
+	public function setCounterLightingNo($counter_lighting_no)
 	{
-		$this->attributes['factor'] = $factor;
+		$this->attributes['counter_lighting_no'] = $counter_lighting_no;
+	}
+
+	public function setCounterLightingFactor($counter_lighting_factor)
+	{
+		$this->attributes['counter_lighting_factor'] = $counter_lighting_factor;
+	}
+
+	public function setCounterLightingBrand(string $counter_lighting_brand)
+	{
+		$this->attributes['counter_lighting_brand'] = $counter_lighting_brand;
+	}
+
+	public function setCounterEngineNo($counter_engine_no)
+	{
+		$this->attributes['counter_engine_no'] = $counter_engine_no;
+	}
+
+	public function setCounterEngineFactor($counter_engine_factor)
+	{
+		$this->attributes['counter_engine_factor'] = $counter_engine_factor;
+	}
+
+	public function setCounterEngineBrand(string $counter_engine_brand)
+	{
+		$this->attributes['counter_engine_brand'] = $counter_engine_brand;
 	}
 
 	public function setOwnership($ownership = SUBS_OWN_YES)

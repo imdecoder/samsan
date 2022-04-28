@@ -55,32 +55,32 @@ class RateEntity extends Entity
         $this->attributes['month_name'] = $month_name;
     }
 
-    public function setMonthNo(int $month_no)
+    public function setMonthNo($month_no)
     {
         $this->attributes['month_no'] = $month_no;
     }
 
-    public function setTaxRate(int $tax_rate)
+    public function setTaxRate($tax_rate)
     {
         $this->attributes['tax_rate'] = $tax_rate;
     }
 
-    public function setUnitPrice(int $unit_price)
+    public function setUnitPrice($unit_price)
     {
         $this->attributes['unit_price'] = $unit_price;
     }
 
-    public function setOverdueInterest(int $overdue_interest)
+    public function setOverdueInterest($overdue_interest)
     {
         $this->attributes['overdue_interest'] = $overdue_interest;
     }
 
-    public function setLightingPrice(int $lighting_price)
+    public function setLightingPrice($lighting_price)
     {
         $this->attributes['lighting_price'] = $lighting_price;
     }
 
-    public function setServicePrice(int $service_price)
+    public function setServicePrice($service_price)
     {
         $this->attributes['service_price'] = $service_price;
     }
