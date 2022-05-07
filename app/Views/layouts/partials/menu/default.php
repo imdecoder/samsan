@@ -31,35 +31,47 @@
             </ul>
         </li>
 		<li>
-			<a href="#entries" data-href="<?=site_url('entries')?>">
+			<a href="#entries" data-href="<?=site_url(route_to('entries'))?>">
 				<i data-acorn-icon="keyboard" class="icon" data-acorn-size="18"></i>
 				<span class="label">Bilgi Girişi</span>
 			</a>
 			<ul id="entries">
                 <li>
-                    <a href="<?=site_url('entries/index')?>">
+                    <a href="<?=site_url(route_to('entries.endexes'))?>">
                         <span class="label">Endeks Bilgileri Girişi</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=site_url('entries/invoices')?>">
+                    <a href="<?=site_url(route_to('entries.invoices'))?>">
                         <span class="label">Fatura Hes. ve Tahsilatı</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=site_url('entries/tek')?>">
+                    <a href="<?=site_url(route_to('entries.tek'))?>">
                         <span class="label">TEK Faturası Girişi</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=site_url('entries/subscribers')?>">
+                    <a href="<?=site_url(route_to('entries.subscribers'))?>">
                         <span class="label">Abone Listesi</span>
                     </a>
                 </li>
 			</ul>
 		</li>
+        <li>
+            <a href="<?=site_url(route_to('castings'))?>">
+                <i data-acorn-icon="book" class="icon" data-acorn-size="18"></i>
+                <span class="label">Dökümler</span>
+            </a>
+        </li>
+        <li>
+            <a href="<?=site_url(route_to('reports'))?>">
+                <i data-acorn-icon="chart-4" class="icon" data-acorn-size="18"></i>
+                <span class="label">Raporlar</span>
+            </a>
+        </li>
 		<li>
-			<a href="<?=site_url('settings')?>">
+			<a href="<?=site_url(route_to('settings'))?>">
 				<i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
 				<span class="label">Ayarlar</span>
 			</a>
