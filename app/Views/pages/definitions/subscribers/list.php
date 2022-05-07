@@ -76,6 +76,9 @@
         <div class="col-sm-12 col-md-5 col-lg-3 col-xxl-2 mb-1">
             <div class="d-inline-block float-md-start me-1 mb-1 search-input-container w-100 shadow bg-foreground">
                 <form action="<?=current_url()?>" method="post">
+
+					<?=csrf_field()?>
+
                     <input type="text" name="q" placeholder="Ara" class="form-control">
                     <span class="search-magnifier-icon">
                         <i data-acorn-icon="search"></i>

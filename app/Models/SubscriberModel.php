@@ -49,8 +49,6 @@ class SubscriberModel extends Model
 		'lastname' => 'required|string|min_length[3]',
 		'degree' => 'string',
 		'counter_type' => 'required',
-		// TODO: "receipt_date" için tarih kuralı eklenecek.
-		'receipt_no' => 'numeric',
 		'status' => 'required'
 	];
 
@@ -79,9 +77,6 @@ class SubscriberModel extends Model
 		],
 		'counter_type' => [
 			'required' => 'Sayaç tipi alanı zorunludur.'
-		],
-		'receipt_no' => [
-			'numeric' => 'Kayıt makbuz numarası alanı sadece rakamlardan oluşabilir.'
 		],
 		'status' => [
 			'required' => 'Abone durumu alanı zorunludur.',

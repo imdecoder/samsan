@@ -34,11 +34,6 @@ class SubscriberEntity extends Entity
 		'deleted_at'
 	];
 
-	/*public function getID()
-	{
-		return $this->attributes['id'];
-	}*/
-
 	public function getYear()
 	{
 		return $this->attributes['year'];
@@ -176,42 +171,47 @@ class SubscriberEntity extends Entity
 		return $this->attributes['deleted_at'];
 	}
 
-	public function setYear(int $year)
+	public function setId($id)
+	{
+		$this->attributes['id'] = $id;
+	}
+
+	public function setYear($year)
 	{
 		$this->attributes['year'] = $year;
 	}
 
-	public function setNo(int $no)
+	public function setNo($no)
 	{
 		$this->attributes['no'] = $no;
 	}
 
-	public function setFirstname(string $firstname)
+	public function setFirstname($firstname)
 	{
 		$this->attributes['firstname'] = $firstname;
 	}
 
-	public function setLastname(string $lastname)
+	public function setLastname($lastname)
 	{
 		$this->attributes['lastname'] = $lastname;
 	}
 
-	public function setDegree(string $degree)
+	public function setDegree($degree)
 	{
 		$this->attributes['degree'] = $degree;
 	}
 
-	public function setNotes(string $notes)
+	public function setNotes($notes)
 	{
 		$this->attributes['notes'] = $notes;
 	}
 
-	public function setPhone(string $phone)
+	public function setPhone($phone)
 	{
 		$this->attributes['phone'] = $phone;
 	}
 
-	public function setMobile(string $mobile)
+	public function setMobile($mobile)
 	{
 		$this->attributes['mobile'] = $mobile;
 	}
@@ -236,7 +236,7 @@ class SubscriberEntity extends Entity
 		$this->attributes['counter_lighting_factor'] = $counter_lighting_factor;
 	}
 
-	public function setCounterLightingBrand(string $counter_lighting_brand)
+	public function setCounterLightingBrand($counter_lighting_brand)
 	{
 		$this->attributes['counter_lighting_brand'] = $counter_lighting_brand;
 	}
@@ -251,7 +251,7 @@ class SubscriberEntity extends Entity
 		$this->attributes['counter_engine_factor'] = $counter_engine_factor;
 	}
 
-	public function setCounterEngineBrand(string $counter_engine_brand)
+	public function setCounterEngineBrand($counter_engine_brand)
 	{
 		$this->attributes['counter_engine_brand'] = $counter_engine_brand;
 	}
@@ -266,7 +266,7 @@ class SubscriberEntity extends Entity
 		$this->attributes['receipt_date'] = $receipt_date;
 	}
 
-	public function setReceiptNo(int $receipt_no)
+	public function setReceiptNo($receipt_no)
 	{
 		$this->attributes['receipt_no'] = $receipt_no;
 	}

@@ -12,6 +12,8 @@
 
     <form action="<?=current_url()?>" method="post">
 
+		<?=csrf_field()?>
+
         <!-- Title and Top Buttons Start -->
         <div class="page-title-container">
             <div class="row g-0">
@@ -60,6 +62,8 @@
             </div>
         </div>
         <!-- Title and Top Buttons End -->
+
+		<?=$this->include('layouts/partials/errors')?>
 
         <div class="row">
             <div class="col-xl-6 mb-5">
@@ -193,7 +197,7 @@
                             <label class="form-label">
                                 Çarpan
                             </label>
-                            <input type="text" name="counter_lighting_factor" value="1.00" class="form-control">
+                            <input type="text" name="counter_lighting_factor" placeholder="1.00" value="" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">
