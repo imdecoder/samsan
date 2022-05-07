@@ -19,6 +19,10 @@ class Rates extends BaseController
 
 	public function list()
 	{
-		return view('pages/definitions/rates/list');
+		$data = [
+			'rates' => $this->rateModel->findAll()
+		];
+
+		return view('pages/definitions/rates/list', $data);
 	}
 }

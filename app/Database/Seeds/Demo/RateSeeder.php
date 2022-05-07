@@ -117,6 +117,6 @@ class RateSeeder extends \CodeIgniter\Database\Seeder
 			]
 		];
 
-		$this->db->table('subscribers')->insertBatch($data);
+		$this->db->table('rates')->insertBatch($data);
 	}
 }

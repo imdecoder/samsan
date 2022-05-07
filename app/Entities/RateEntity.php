@@ -50,7 +50,7 @@ class RateEntity extends Entity
         return $this->attributes['service_price'];
     }
 
-    public function setMonthName(string $month_name)
+    public function setMonthName($month_name)
     {
         $this->attributes['month_name'] = $month_name;
     }

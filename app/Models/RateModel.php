@@ -11,7 +11,7 @@ class RateModel extends Model
 	protected $primaryKey = 'id';
 
 	protected $returnType = RateEntity::class;
-	protected $useSoftDeletes = true;
+	// protected $useSoftDeletes = true;
 
 	protected $allowedFields = [
         'month_name',
